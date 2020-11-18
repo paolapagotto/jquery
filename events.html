@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+ <body>
+
+<!--evento para ação de clicar em botão: CLICK-->
+ <input id="botao" value="click" type="button" />
+ <p id="descricao">jquery</p>
+
+ <script src="js/jquery.js"></script>
+ <script>
+    $('#botao').click(function() {
+        $('#descricao').text(" jquery - write less, do more");
+    });
+ </script>
+
+<!--evento para a validação de inputs: BLUR-->
+<input id="nome" type="text" />
+<script src="jquery.js"></script>
+<script>
+   $('#nome').blur(function() {
+    alert("saindo do campo nome!")
+  });
+</script>
+
+<!--A função ON recebe como parâmetro uma string que define o tipo do evento-->
+Nome: 
+  <input id="nome"  type="text" />
+  <input type="button" value="Gravar" />
+
+  <script src="jquery.js"></script>
+  <script>
+    $('#nome').on("blur", function() {
+        var texto = $(this).val();
+        if(!texto) {
+            alert("Nao deve ser vazio!");
+        }
+    });
+  </script>
+
+ </body>
+</html>
